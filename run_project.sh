@@ -1,1 +1,1 @@
-npm run serve
+npm run build && cp -ra dist/* /var/www/html/
