@@ -1,1 +1,1 @@
-npm run build && cp -ra dist/* /var/www/html/
+git pull && npm run build && cp -ra dist/* /var/www/html/
