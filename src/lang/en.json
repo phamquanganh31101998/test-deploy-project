@@ -1,0 +1,13 @@
+{
+  "home": {
+    "greeting": "This is home page"
+  },
+  "about": {
+    "greeting": "This is about page"
+  },
+  "app_bar": {
+    "select_language": "Language",
+    "vietnamese": "Vietnamese",
+    "english": "English"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "home": {
+    "greeting": "Đây là trang home"
+  },
+  "about": {
+    "greeting": "Đây là trang about"
+  },
+  "app_bar": {
+    "select_language": "Ngôn ngữ",
+    "vietnamese": "Tiếng Việt",
+    "english": "Tiếng Anh"
+  }
+}
