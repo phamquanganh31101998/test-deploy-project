@@ -31,28 +31,27 @@
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+  name: "App",
 
   data: () => ({
     //
     languages: [
       {
-        "text": "vi",
-        "value": "vi"
+        text: "vi",
+        value: "vi"
       },
       {
-        "text": "en",
-        "value": "en"
+        text: "en",
+        value: "en"
       }
     ],
     language: "vi"
   }),
   methods: {
     callSetLangActions() {
-      this.$store.dispatch('setLang', this.language)
+      this.$store.dispatch("setLang", this.language)
     }
   }
-};
+}
 </script>

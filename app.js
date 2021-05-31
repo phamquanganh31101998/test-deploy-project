@@ -1,11 +1,10 @@
-const express = require('express');
-const app = express();
-const port = 8080;
+const express = require("express")
 
-app.use(express.static(__dirname + '/public'));
+const app = express()
+const port = 8080
 
-app.get('/', (req, res) => {
-    return res.render('index');
-});
+app.use(express.static(`${__dirname}/public`))
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.get("/", (req, res) => res.render("index"))
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
