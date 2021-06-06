@@ -52,6 +52,7 @@ export default {
     callSetLangActions() {
       this.$store.dispatch("setLang", this.language)
     }
-  }
+  },
+  created() {}
 }
 </script>
