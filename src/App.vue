@@ -1,23 +1,8 @@
 <template lang="pug">
   v-app
-    v-app-bar(app dark color="primary")
-      div.d-flex.align-center
-        v-img(
-          contain
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        )
-        v-img(
-          contain
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        )
+    v-app-bar(app dark clipped-left color="primary")
+      v-app-bar-nav-icon(@click="toggleNavDrawer")
+      v-toolbar-title Total Apps
 
       v-spacer
 
@@ -26,13 +11,20 @@
         @input="callSetLangActions"
         v-model="language"
       )
+    navigation-drawer
     v-main
-      router-view
+      v-container(fluid)
+        router-view
 </template>
 
 <script>
+import NavigationDrawer from "./components/NavigationDrawer.vue"
+
 export default {
   name: "App",
+  components: {
+    NavigationDrawer
+  },
 
   data: () => ({
     //
@@ -51,6 +43,9 @@ export default {
   methods: {
     callSetLangActions() {
       this.$i18n.locale = this.language
+    },
+    toggleNavDrawer() {
+      this.$store.dispatch("toggleNavDrawer")
     }
   },
   created() {}
