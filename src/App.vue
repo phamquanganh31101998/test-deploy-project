@@ -50,7 +50,7 @@ export default {
   }),
   methods: {
     callSetLangActions() {
-      this.$store.dispatch("setLang", this.language)
+      this.$i18n.locale = this.language
     }
   },
   created() {}
